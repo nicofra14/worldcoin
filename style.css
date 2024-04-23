@@ -1,0 +1,360 @@
+/* Estilos generales */
+body {
+    font-family: "Bebas Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos del nav */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff; /* Color de fondo de la barra de navegación */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.navbar a.logo img {
+    max-width: 90px; /* Ajusta el tamaño máximo de tu logo según lo necesites */
+    max-height: 90px;
+}
+
+.navbar .grow {
+    flex-grow: 1; /* Espacio flexible para que el botón de menú se mueva a la derecha */
+}
+
+.logo {
+    height: 60px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+.text {
+    margin-bottom: 20px;
+}
+
+.header-image {
+    max-width: 100%;
+    max-height: 80%; /* Para que la imagen se ajuste al ancho del contenedor */
+    height: auto; /* Para mantener la proporción de la imagen */
+    margin-top: 20px; /* Espacio entre el texto y la imagen */
+}
+
+/* Media query para ajustar el diseño en pantallas más pequeñas */
+@media screen and (min-width: 768px) {
+    .header-content {
+        flex-direction: row; /* Cambia la dirección del flexbox para poner la imagen al lado del texto */
+        align-items: center;
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+
+    .text {
+        margin-right: 20px; /* Espacio entre la imagen y el texto */
+    }
+}
+
+/* Estilos de las secciones */
+section {
+    padding: 6em 0; /* Cambiar a unidades relativas */
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2em; /* Cambiar a tamaño de fuente relativo */
+    margin-bottom: 1.25em; /* Cambiar a unidades relativas */
+}
+
+p {
+    font-size: 1.5em; /* Cambiar a tamaño de fuente relativo */
+    margin-bottom: 1.875em; /* Cambiar a unidades relativas */
+}
+
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .swiper-slide {
+        width: calc(100% / 2 - 20px); /* Reducir el ancho de los slides para que quepan 2 en una fila en pantallas más pequeñas */
+    }
+}
+
+/* Estilos del formulario */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed; /* Posición fija */
+    z-index: 1; /* Ubicar el modal por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* Permitir desplazamiento cuando el contenido del modal exceda la pantalla */
+    background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente */
+  }
+  
+  /* Contenido del modal */
+  .modal-content {
+    background-color: #fefefe; /* Fondo del modal */
+    margin: 15% auto; /* Margen superior e inferior automático, centrando verticalmente */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 400px; /* Ancho máximo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Mantener los estilos para .form-group */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para el botón de cerrar */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 80px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    max-width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px;
+}
+
+select {
+    width: 100%;
+    max-width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    appearance: none; /* Oculta la apariencia nativa del select */
+    -webkit-appearance: none; /* Para navegadores basados en WebKit */
+    -moz-appearance: none; /* Para navegadores basados en Gecko */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>'); /* Agrega una flecha personalizada */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Ajusta la posición de la flecha */
+    background-size: 16px; /* Tamaño de la flecha */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el select */
+}
+
+.btn1 {
+    width: 100%;
+    max-width: 50%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn1:hover {
+    background-color: #0056b3;
+}
+
+.btn3,
+.btn2 {
+    border-radius: 50px;
+    border: 1px solid;
+    padding: 10px 25px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn3:hover,
+.btn2:hover {
+    background-color: #353535;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.25em 0; /* Cambiar a unidades relativas */
+}
+
+
+/* Estilos para pantallas pequeñas (hasta 600px de ancho) */
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 3.6em; /* Tamaño de fuente más pequeño para encabezado en pantallas pequeñas */
+        line-height: 1em;
+    }
+    section {
+        padding: 3em 0; /* Reducir el relleno en secciones para pantallas pequeñas */
+    }
+
+}
+
+/* Estilos para pantallas medianas (de 601px a 1024px de ancho) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 4.5em; /* Tamaño de fuente más grande para encabezado en pantallas medianas */
+        line-height: 1em;
+     }
+    section {
+        padding: 5em 0; /* Ajustar el relleno en secciones para pantallas medianas */
+    }
+}
+
+/* Estilos para pantallas grandes (más de 1024px de ancho) */
+@media screen and (min-width: 1025px) {
+    header h1 {
+        font-size: 7em; /* Tamaño de fuente aún más grande para encabezado en pantallas grandes */
+        line-height: 1em;
+    }
+    section {
+        padding: 7em 0; /* Ajustar el relleno en secciones para pantallas grandes */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    .header {
+        margin-top: 20px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-content .text {
+        margin-bottom: 10px; /* Reducir el margen inferior del texto */
+        text-align: center;
+    }
+
+    .header-image {
+        margin-top: 10px; /* Ajustar el margen superior de la imagen */
+    }
+
+    .modal-content {
+        margin-top: 10px; /* Ajustar el margen superior del modal en pantallas pequeñas */
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .container {
+        max-width: 1000px; /* Reducir el ancho máximo del contenedor */
+    }
+
+    .navbar {
+        padding: 10px 20px; /* Reducir el relleno en el nav */
+        margin-top: 10px; /* Ajustar el margen superior del nav */
+    }
+
+    .header {
+        padding: 20px 0; /* Reducir el relleno en el encabezado */
+        margin-top: -100px; /* Ajustar el margen inferior del encabezado */
+    }
+}
+
+
+    .navbar {
+        padding: 10px 20px; /* Reducir el relleno en el nav */
+        margin-top: 10px; /* Ajustar el margen superior del nav */
+    }
+
+    .header {
+        padding: 40px 0; /* Reducir el relleno en el encabezado */
+        margin-bottom: 0; /* Ajustar el margen inferior del encabezado */
+    }
+
+
+
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 70px; /* Ajusta la distancia desde la parte inferior */
+    right: 50px; /* Ajusta la distancia desde el borde derecho */
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+  }
+  
+  .whatsapp-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #10B981;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .whatsapp-icon img {
+    width: 60%;
+    height: auto;
+  }
+  
+  .whatsapp-button:hover .whatsapp-icon {
+    background-color: #25d366;
+    border-color: #059669;
+  }
+  
+  .whatsapp-button:focus .whatsapp-icon {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.5);
+  }

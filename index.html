@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Landing Page</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@1,800&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Oswald&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+
+</head>
+<body>
+ 
+    <div class="navbar">
+        <a href="#">
+            <img class="logo" src="/img/worldcoin2.svg" alt="logo">
+        </a>
+    </div>
+    
+    <header class="header">
+        <div class="header-content">
+            <div class="text">
+                <h1>Para toda la comunidad de Worldcoiners en España, y alrededor del mundo</h1>
+                <p>Participa en los sorteos mensuales con los worldcoins obtenidos a la fecha</p>
+                <p>¡Descubre cómo puedes ganar increíbles premios y ser parte de nuestra comunidad activa!</p>
+                <button class="btn2" id="openModalBtn">Quiero participar</button>
+            </div>
+            <img src="/img/worldcoinimg.png" alt="Worldcoin" class="header-image">
+        </div>
+    </header>
+
+    <section>
+        <img class="header-image" src="/img/worldcoin3.png" alt="">
+    </section>
+    
+    <section>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Suscríbete para recibir información</h2>
+             <form>
+                     <div class="form-group">
+                       <input type="text" id="name" name="name" placeholder="Número de movil">
+                     </div>
+                     <div class="form-group">
+                       <input type="text" id="additional-info" name="additional-info" placeholder="Direccion de depósito">
+                     </div>
+                     <div class="form-group">
+                    <label for="option">Quiero participar por:</label>
+                    <select id="option" name="option">
+                      <option value="Bitcoinle="background-image: url('icono1.svg');">Bitcoin</option>
+                      <option value="Ethereum" style="background-image: url('/img/eth-svgrepo-com.svg');">Ethereum</option>
+                      <option value="worldcoin" style="background-image: url('icono3.svg');">Worldcoin</option>
+                      <option value="Efectivo" style="background-image: url('/img/worldcoin2.svg');">Efectivo</option>
+                    </select>
+                  </div>
+                <button type="submit" class="btn2">Enviar</button>
+              </form>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://api.whatsapp.com/send/?phone=34600916338&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" class="whatsapp-button">
+        <div class="whatsapp-icon">
+          <img src="img/whatsapp.svg" alt="contacto-whatsapp">
+        </div>
+      </a>
+    <footer>
+        <p>Derechos de Autor &copy; 2024 Tu Empresa</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
